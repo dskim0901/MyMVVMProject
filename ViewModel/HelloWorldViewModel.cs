@@ -33,7 +33,7 @@ namespace MyMVVMProject.ViewModel
         /// Raises OnPropertychangedEvent when property changes
         /// </summary>
         /// <param name="name">String representing the property name</param>
-        protected void OnPropertyChanged([CallerMemberName] string name = null)
+        protected void OnPropertyChanged([CallerMemberName] string name = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
