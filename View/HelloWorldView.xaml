@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyMVVMProject.View"
+        xmlns:vm="clr-namespace:MyMVVMProject.ViewModel"
         mc:Ignorable="d"
-        Title="HelloWorldView" Height="450" Width="800">
+        Title="HelloWorldView" Height="300" Width="300">
+    <Window.DataContext>
+        <vm:HelloWorldViewModel/>
+    </Window.DataContext>
     <Grid>
-        
+        <Label x:Name="label" FontSize="30" Content="{Binding HelloString}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Window>
