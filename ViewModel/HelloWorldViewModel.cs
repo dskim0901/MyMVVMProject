@@ -14,7 +14,7 @@ namespace MyMVVMProject.ViewModel
     {
         private string helloString;
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         public string HelloString
         {
