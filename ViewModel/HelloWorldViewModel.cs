@@ -16,6 +16,12 @@ namespace MyMVVMProject.ViewModel
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
+        public HelloWorldViewModel()
+        {
+            HelloWorldModel helloWorldModel = new HelloWorldModel();
+            helloString = helloWorldModel.ImportantInfo;
+        }
+
         public string HelloString
         {
             get
@@ -38,10 +44,5 @@ namespace MyMVVMProject.ViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
-        public HelloWorldViewModel()
-        {
-            HelloWorldModel helloWorldModel = new HelloWorldModel();
-            helloString = helloWorldModel.ImportantInfo;
-        }
     }
 }
